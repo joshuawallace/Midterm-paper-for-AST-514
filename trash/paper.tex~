@@ -1,0 +1,29 @@
+%\documentclass[preprint]{aastex}
+\documentclass{emulateapj}
+%\documentclass{article}
+\usepackage{graphicx}
+\usepackage{natbib}
+%\bibliographystyle{apj}
+
+
+\def\h{H$^-$}
+\def\chi{$\chi$}
+
+\begin{document}
+
+\begin{abstract}
+A review of H$^-$ in stellar atmospheres
+\end{abstract}
+
+\title{\h}
+
+\section{Introduction}
+\input{introduction.tex}
+
+\section{Part 2}
+
+\bibliographystyle{apj}
+\bibliography{bibliography}
+
+
+\end{document}

@@ -1,3 +1,6 @@
 *.dvi
 *.aux
-*.pdf
+paper.pdf
+*.bbl
+*.log
+*.blg
