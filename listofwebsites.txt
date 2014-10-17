@@ -1,0 +1,5 @@
+http://www.staff.science.uu.nl/~rutte101/rrweb/rjr-edu/lectures/rutten_ssi_lec.pdf
+
+The above site has a plot of temperature of gas emitting light
+vs. wavelength, showing a clear decrease for wavelengths shorter than
+1.6 microns
