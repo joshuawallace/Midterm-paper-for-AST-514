@@ -1,0 +1,24 @@
+The non-relativistic, Coulomb-interaction only Hamiltonian for \h\ is given by 
+\begin{equation}
+\label{eq:H}
+H = \frac{p_1^2}{2m_e} + \frac{p_2^2}{2m_e} - \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_1} -  \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_2} +  \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_{12}}
+\eeq
+where $m_e$ is the mass of the electron, $p$ is the classical kinetic energy of the electron specified by the subscript, $e$ is the charge of the electron, $\epsilon_0$ is the vacuum permittivity, $r_1$ is the distance from the first electron to the nucleus, $r_2$ is the corresponding value for the second electron, and $r_{12}$ is the distance between the two electrons.  In this Hamiltonian the nucleus is assumed to be fixed and thus does not possess its own kinetic energy.  This Hamiltonian possesses a term for each electron's kinetic energy, each electron's potential energy from its interaction with the nucleus (a single proton), and (specifically the last term in equation~\ref{eq:H}) a term for the repulsive Coulomb interaction between the two electrons.
+
+Hylleraas
+
+It has been rigorously shown that \h\ has no bound excited states, i.e., the only bound state is the ground state (\citealt{hill1977}).  As such, \h\ does not have a spectrum as it is normally referred to; there are no electronic transitions between bound states that absorb and emit photons of specific wavelengths.  Its main contribution to the opacity of the solar atmosphere is through continuum absorption of photons with energy greater than the binding energy of its least bound electron.  
+
+The effect of screening due to free electrons on the binding energy of the \h\ ion has been looked at.  The partially ionized nature of the solar atmosphere makes this a relevant study.  \cite{phelpsbajaj1983} use a variational approach to show that the effect screening due to free electrons has on the binding energy of the \h\ ion is within a factor of 2 (as they quantify it) of the effect of screening on the binding energy of a single-electron H atom, despite the electron of the neutral H being $\sim 18$ times more bound than the least bound electron of \h.  To be specific, \cite{phelpsbajaj1983} 
+%define a screening parameter $\delta$, where
+%\beq
+%\delta^2 = \sum_i \frac{4\pi n e^2}{k_B T}\left[ \frac{F_{-1/2}(\nu_i)}{F_{1/2}(\nu_i)}
+%\eeq
+assume a Dingle-Mansfield screening, which modifies equation~\ref{eq:H} to
+\beq
+H = \frac{p_1^2 + p_2^2}{2m_e} - \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_1}e^{-\delta r_1} -  \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_2}e^{-\delta r_2} + \\
+ \frac{1}{4\pi\epsilon_0}\frac{e^2}{r_{12}} e^{-\delta r_{12}}
+\eeq
+where $\delta$ is a screening parameter defined in the text.  For my purpose of comparison the exact definition of the screening parameter is not necessary to include.  They calculate that for  \h\ the binding energy goes to zero for $a_0 \delta = 0.87$  (where $a_0$ is the Bohr radius) while it is shown elsewhere that for H binding energy goes to zero for $a_0 \delta = 1.2$ (\citealt{rogersetal1970}).  The two values of $a_0 \delta$ are not very different which, as mentioned previous, seems surprising due to the factor $~18$ discrepancy between the binding energies of H and \h.  \cite{phelpsbajaj1983} attribute this to the assumption that the interactions between the proton and the electrons and the interaction between the electrons themselves are modified in the presence of free electrons and so the ground state energy is itself modified as a function of $\delta$; so the binding energy is modified both by the presence of free electrons and by the change in the ground state energy in the presence of free electrons.  The interplay of these two effects is what allows a perhaps intially surprisingly large value of $a_0 \delta$ for the binding energy to go to zero in \h.
+
+Possibly include screening parameter plot
