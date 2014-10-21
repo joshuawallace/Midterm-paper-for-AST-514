@@ -5,7 +5,11 @@ H = \frac{p_1^2}{2m_e} + \frac{p_2^2}{2m_e} - \frac{1}{4\pi\epsilon_0}\frac{e^2}
 \eeq
 where $m_e$ is the mass of the electron, $p$ is the classical kinetic energy of the electron specified by the subscript, $e$ is the charge of the electron, $\epsilon_0$ is the vacuum permittivity, $r_1$ is the distance from the first electron to the nucleus, $r_2$ is the corresponding value for the second electron, and $r_{12}$ is the distance between the two electrons.  In this Hamiltonian the nucleus is assumed to be fixed and thus does not possess its own kinetic energy.  This Hamiltonian possesses a term for each electron's kinetic energy, each electron's potential energy from its interaction with the nucleus (a single proton), and (specifically the last term in equation~\ref{eq:H}) a term for the repulsive Coulomb interaction between the two electrons.
 
-Hylleraas
+Many approaches have been taken to calculate wavefunctions for \h.  Many-paramter Hylleraas functions seem to be the most commonly used.  I will focus on a simple two-parameter trial wavefunction used by \cite{chandra1944} because of the interpretations to which the simple wavefunction lends itself.  The wavefunction is
+\beq
+\phi = \exp{-\alpha r_1 - \beta r_2} + \exp{\alpha r_2 - \beta r_1}.
+\eeq
+Chandrasekhar showed that the minimum energy of this wavefunction (at $\alpha = 1.03925$ and $\beta = 0.28309$) is sufficient to provide binding for \h.  The wavefunction gives the electrons a radial hierarchy, with one electron in close to the nucleus and the other far away from the nucleus (which gives it its correspondingly smaller binding energy). % Additionally, the innermost electron
 
 It has been rigorously shown that \h\ has no bound excited states, i.e., the only bound state is the ground state (\citealt{hill1977}).  As such, \h\ does not have a spectrum as it is normally referred to; there are no electronic transitions between bound states that absorb and emit photons of specific wavelengths.  Its main contribution to the opacity of the solar atmosphere is through continuum absorption of photons with energy greater than the binding energy of its least bound electron.  
 
