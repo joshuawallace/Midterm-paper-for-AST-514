@@ -10,7 +10,7 @@ figure~\ref{fig:bfcrosssection}; the lines connecting the points are a
 cubic spline interpolation.  The right side of the figure shows the
 cross-section for photons with energies close to the $0.75$ eV
 sufficient to ``ionize'' the \h ion to become H.  The cross-section
-peaks at $\sim 8500\AA$ and then decreases with increasing photon
+peaks at $\sim 8500$\AA and then decreases with increasing photon
 energy.  It is interesting to note that this cross-section peaks in
 the optical with large values in the near infrared and near
 ultraviolet, just as does solar spectrum.  Hence, the \h\ opacity is
@@ -22,11 +22,23 @@ outside the optical.
 \begin{figure}
 \includegraphics[width=80mm]{figs/boundfree_crosssection.png}
 \caption{\label{fig:bfcrosssection}The bound-free photo-detachment
-cross-section of \h\. Tabulated values calculated
+cross-section of \h. Tabulated values calculated
 by \cite{wishart1979} are given as open circles with a cubic spline
 interpolation shown as the line connecting the points.  The calculated
 cross-sections span from near infrared (at the wavelengths where photon
 energies are sufficiently high to ionize the least bound electron
 of \h) to near ultraviolet. As shown, photon energy increases along
 the x-axis from right to left.}
+\end{figure}
+
+Figure~\ref{fig:bohmopacity} shows  opacity as a function of wavelength over the range of wavelengths where \h\ bound-free opacities are relevant for a theoretical solar-like star.  At high wavelengths, past the $\sim 1.6 \mu$m cutoff for \h\ opacity free-free interactions with \h\ dominate the opacity (the H in the figure is a typo, it should be \h), while at lower wavelengths Balmer bound-free absorption begins to dominate the opacity.
+\begin{figure}
+\includegraphics[width=80mm]{figs/hminusopacity.png}
+\caption{\label{fig:bohmopacity}Continuous absorption coefficient per heavy particle, shown for $\Theta=0.9$ (which means $T=5600$ K and log $P_e=1.0$.  Note that the free-free contribution is mislabelled; it should be free-free from \h\ not H.  Figure from \cite{boehm1989}.}
+\end{figure}
+
+Figures~\ref{fig:bfcrosssection} and \ref{fig:bohmopacity} both show that the opacity doesn't show a discontinuity at the $\sim$1.6$\mu$m cutoff value for \h\ ``ionization'' as would be expected and is indeed seen for other species being ionized.  Figure~\ref{fig:bethe} (taken from \citealt{bethe1977}) shows $\sigma$ as a function of photon frequency relative to the frequency corresponding to the ionization energy $\nu$ for H, He, and \h.  H and He both show a large cross-section right at the threshold frequency which decays with increasing frequency; \h, however, shows a small cross-section right at the threshold which increases and reaches a maximum at $\nu/\nu{thr}\sim$1.7.  \cite{rau1996} explains this in terms of basic quantum mechanics and angular momentum.  After a photon is absorbed by \h\ the electron departs in a $p$-wave.  In the ground state of \h, however, both the electrons are in the $s$ orbital.  Thus there is an angular momentum barrier that must be overcome, via quantum tunnelling.  Just above the ionization threshold electrons have low energy and see the angular momentum barrier as the longest range potential; the probabilities associated with tunnelling through this barrier thus affect the cross-section at these low energies. .  {\bf Can talk about Wigner 1948 E to the l+1/2 if you want. Rau page 116}.  This is not the case for neutral atoms, where the Coulomb potential is the longest-range potential.  This potential has no dependence on angular momentum and, as such, there is no angular dependence on the cross-section.
+\begin{figure}
+\includegraphics[width=80mm]{figs/betheplot.png}
+\caption{\label{fig:bethe}Photoionization cross-section as a function of photon frequency, expressed in the unitless ratio $\nu/\nu_{thr}$, which is the ratio of the photon frequency relative to frequency of a photon with energy corresponding to the ionization energy of the species.  Cross-sectionsH, He, and \h\ are shown (from \citealt{bethe1977}).}
 \end{figure}
