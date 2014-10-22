@@ -71,7 +71,30 @@ Using the value given in \cite{boehm1989} for the electron pressure in
 the solar photosphere 
 ($P_e = 1.5$) we can calculate the abundance of \h\ relative to H
 (using 5778 K\footnote{From NASA: www.nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html} as $T$)
-\beq
+\begin{multline}
 \log \frac{N(H)}{N(H^-)} = \log \frac{4}{1} + \log 2 + 9.40 - 0.658  -
-1.5 - 0.48 = 7.7
+1.5 - 0.48\\ = 7.7
+\end{multline}
+Inverting we find 
+\beq
+\frac{N(H^-)}{N(H)}=10^{-7.7} \approxeq 2 \times 10^{-8}.
 \eeq
+There is only a small fraction of H at any given time in the
+photosphere that has become \h.  To understand better why \h\ in such
+small abundances has such a large impact on the opacity in visible
+wavelengths we must compare its abundance to other species that have
+continuum opacities at visible wavelengths.  The Paschen continuum of
+hydrogen (ionization from $n=3$) is the only other thing that can contribute
+to continuum opacity in the visual spectral range
+(\citealt{boehm1989}).  \cite{boehm1989} then calculates the relative
+abundances of H($n=e$) to \h\ and finds
+\beq
+\frac{N_H(n=3)}{N(H^-)} = 2 \times 10^{-2}.
+\eeq
+So, there is about 100 times more \h\ than hydrogen atoms at $n=3$;
+assuming that the absorption coefficients of \h\ and  hydrogen atoms
+at $n=3$ are within a factor of 10 it can be clearly seen from this
+calculation alone that \h\ will be the dominating contribution to the
+opacity in visual wavelengths.
+
+%The Balmer continuum is in UV

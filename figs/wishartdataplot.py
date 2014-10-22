@@ -29,6 +29,6 @@ pp.xlabel(r"Wavelength (\AA)")#,fontsize=20)
 pp.ylabel(r"$\sigma$ (10^{-18}~cm$^{2}$)")#,fontsize=20)
 
 
-pp.savefig("boundfree.crosssection.png")
+pp.savefig("boundfree_crosssection.pdf")
 
 #pp.show()
