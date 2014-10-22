@@ -9,20 +9,69 @@ of these factors have some sort of dependence on temperature.
 %\h\ is small, and as is shown in section 7.4 of \cite{boehm1989} the
 %fraction of H atoms
 
-Because the creation of \h\ depends not only on the normal Saha
-equation calculation of relative abundances (in our case,
-$N(H)/N(H^-)$) but also on the presence of free electrons the normal
-Saha equation can be written in the form (\citealt{collins1989})
+%Because the creation of \h\ depends not only on the normal Saha
+%equation calculation of relative abundances (in our case,
+%$N(H)/N(H^-)$) but also on the presence of free electrons the normal
+%Saha equation can be written in the form (\citealt{collins1989})
+%\beq
+%\label{eq:saha}
+%\frac{N(H)}{N(H^-)} = \Phi (T) P_e
+%\eeq
+%where $P_e$ is the electron pressure (and is hence dependent on the
+%ionization states of all species present in the solar atmosphere) and
+%$\Phi (T)$ is the normal partion functional form of the Saha
+%ionization equation
+
+The abundance of an ionized species can be calculated using the Saha
+ionization equation, which is given by
 \beq
-\frac{N(H)}{N(H^-)} = \Phi (T) P_e
+\label{eq:saha}
+\frac{n(X_{i+1})}{n(X_{i})} = \frac{(2\pi m k T)^{1.5}}{n_e h^3}\frac{2g_{i+1}}{g_{i}}e^{-\chi/kT}
 \eeq
-where $P_e$ is the electron pressure (and is hence dependent on the
-ionization states of all species present in the solar atmosphere) and
-$\Phi (T)$ is the normal partion functional form of the Saha
-ionization equation
+ where $\chi$ is the energy difference between the two ionization
+states, $n_e$ is the number density of electrons, $k$ is the Boltzmann
+constant, $h$ is the Planck constant, $T$ is the temperature, $X_i$ is
+an atom $X$ in the $i$th ionization state, and $g_i$ is the degeneracy
+factor corresponding to the $i$th ionization state.  Specifically
+for \h\ we get
 \beq
-\Phi (T) = \frac{(2\pi m k T)^{1.5}}{n_e h^3}\frac{2g_{H}}{g_{H^-}}e^{-\chi/kT}
+\frac{N(H)}{N(H^-)} = \frac{(2\pi m k T)^{1.5}}{n_e h^3}2\frac{1}{2}e^{-0.754\textrm{eV}/kT}.
 \eeq
-where $\chi$ is the energy difference between the two ionization
-states and $g_H$ is the degeneracy of states for H and $g_{H^-}$ is
-the corresponding value for \h, and $n_e$ is the number density of electrons.
+In practice using equation~\ref{eq:saha} is complicated by the fact that
+$n_e$ is determined by electrons contributed from all species, not
+just the specific atom/ion in question.  It can be calculated by
+summing over the number density
+of ionized particles multiplied by their degree of ionization (whether
+they contribute one electron, two electrons, etc.). This is expressed by
+\beq
+\label{ref:ne}
+n_e = \sum\limits_{i,j}j\times n_{ij}
+\eeq
+where $i$ represents a specific atom and $j$ represents the ionization state
+of the atom, thus summing over all possible ions of all atoms.  Since,
+as can be seen in equation~\ref{eq:saha} $n_{ij}$ also depends on
+$n_e$ we end up with a system of equations that, when rounded out with
+equation~\ref{ref:ne}, gives us the same number of equations and
+unknowns.  However, values for $n_e$ in the sun have been previously
+calcuated and I will use a value given in \cite{boehm1989} who
+expresses the Saha equation in the logarithmic form
+%\begin{align}
+\begin{multline}
+\log \frac{N(X_{i+1})}{N(X_i)} = \log \frac{u_{i+1}}{u_i}+\log 2 +\\
+ 2.5 \log T - \frac{\chi}{kT}\log e - \log P_e - 0.48
+\end{multline}
+%\end{align}
+where log is log$_{10}$, $P_e=n_e kT$ is the
+electron pressure, $u$ is the partition function
+\beq
+u_i = g_i + \sum\limits_{n=2}^{\infty} g_{in} e^{\chi_{in}/kT}
+\eeq
+which is summed over all the energy levels of a particular species.
+Using the value given in \cite{boehm1989} for the electron pressure in
+the solar photosphere 
+($P_e = 1.5$) we can calculate the abundance of \h\ relative to H
+(using 5778 K\footnote{From NASA: www.nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html} as $T$)
+\beq
+\log \frac{N(H)}{N(H^-)} = \log \frac{4}{1} + \log 2 + 9.40 - 0.658  -
+1.5 - 0.48 = 7.7
+\eeq
