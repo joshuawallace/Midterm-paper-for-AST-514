@@ -29,17 +29,24 @@ T = 5778. #if this is changed the prefactor will need to be chaged as well. Mayb
 
 rel=[]
 
+normalization = 1.20324462038e+14#1.0#82374.5901884
+
 for i in range(len(bigun)):
     relativeabundance = np.exp(bigun[i][1] - 12.0)
     sahaionization = 2.413e15 * (T)**(1.5) * 2. * bigun[i][3] * np.exp(-1*bigun[i][2] / (8.6173324e-5 * T))
     print bigun[i][0] + ":"
-    string = "Relative abundance is " + str(relativeabundance)
-    print string
-    string = "Fraction of particles ionized is " + str(sahaionization)
-    print string
+#    string = "Relative abundance is " 
+#    print relativeabundance
+#    print string
+    print "Fraction of particles ionized is "
+    print sahaionization
     r = relativeabundance * sahaionization
-    string = "Relative number of electrons contributed is " + str(r) + "\n"
-    print string
+#    if i==0:
+#        normalization = r
+    r = r/normalization
+    print "Relative number of electrons contributed is "
+    print r
+    print "\n"
     rel.append(r)
 
 sum_ = sum(rel)

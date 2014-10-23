@@ -70,13 +70,14 @@ which is summed over all the energy levels of a particular species.
 Using the value given in \cite{boehm1989} for the electron pressure in
 the solar photosphere 
 ($P_e = 1.5$) we can calculate the abundance of \h\ relative to H
-(using 5778 K\footnote{From NASA: www.nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html} as $T$)
+(using 5778 K\footnote{From NASA: www.nssdc.gsfc.nasa.gov/planetary/factsheet/ sunfact.html} as $T$)
 \begin{multline}
 \log \frac{N(H)}{N(H^-)} = \log \frac{4}{1} + \log 2 + 9.40 - 0.658  -
 1.5 - 0.48\\ = 7.7
 \end{multline}
 Inverting we find 
 \beq
+\label{eq:hminusab}
 \frac{N(H^-)}{N(H)}=10^{-7.7} \approxeq 2 \times 10^{-8}.
 \eeq
 There is only a small fraction of H at any given time in the
@@ -86,10 +87,24 @@ wavelengths we must compare its abundance to other species that have
 continuum opacities at visible wavelengths.  The Paschen continuum of
 hydrogen (ionization from $n=3$) is the only other thing that can contribute
 to continuum opacity in the visual spectral range
-(\citealt{boehm1989}).  \cite{boehm1989} then calculates the relative
-abundances of H($n=e$) to \h\ and finds
+(\citealt{boehm1989}).  
+%\cite{boehm1989} then calculates the relative
+%abundances of H($n=e$) to \h\ and finds
+We can calculate the relative abundance of H($n=3$) to \h.
 \beq
-\frac{N_H(n=3)}{N(H^-)} = 2 \times 10^{-2}.
+ \frac{N(H_{n=3})}{N(H^-)} = \frac{N(H_{n=3})}{N(H_{n=1})}\frac{N(H_{n=1})}{N(H^-)}
+\eeq
+We can make the approximation that $N(H_{n=1})\approxeq N(H)$ since (as will be shown over the course of the next several equations) the number of H atoms with electrons in an excited state is small.
+\beq
+ \frac{N(H_{n=3})}{N(H^-)} = \frac{N(H_{n=3})}{N(H_{n=1})}\frac{N(H)}{N(H^-)}
+\eeq
+\cite{boehm1989} calculates the number of H atoms with electrons excited to $n=3$ relative to H atoms in the ground state and gets
+\beq
+\frac{N(H_{n=3})}{N(H_{n=1})} = 6 \times 10 ^{-10}.
+\eeq
+We will also plug in the value calculated by \cite{boehm1989} for $N(H)/N(H^-)$ since she used a slightly different temperature than I did in my calculation (equation~\ref{eq:hminusab}) for consistency.  She calculated $N(H)/N(H^-) \approx 3 \times 10^{-8}$.  Plugging in the values we get
+\beq
+\frac{N(H_{n=3})}{N(H^-)} = \frac{6 \times 10 ^{-10}}{3 \times 10^{-8}} = 2 \times 10^{-2}.
 \eeq
 So, there is about 100 times more \h\ than hydrogen atoms at $n=3$;
 assuming that the absorption coefficients of \h\ and  hydrogen atoms
@@ -99,3 +114,20 @@ opacity in visual wavelengths.
 
 %The Balmer continuum is in UV
 \cite{boehm1989} also shows that \h\ is only about 10 times less abundant than hydrogen atoms in $n=2$.  Since the Balmer ionization energy (corresponding to photon wavelength of 3647 \AA) occurs in the ultraviolet, where \h\ contributions to opacity are less than in the optical, and there is a relatively large fraction of $n=2$ H relative to \h\ there is a measurable increase in continuum opacity due to $n=2$ H.  %Indeed, figure~\ref{fig:bohmopacity} shows the Balmer discontinuity in the ultraviolet.
+
+Let's put a table here and figure out how to integrate it tomorrow when I'm awake.
+
+\begin{table}[h]
+\caption{\label{tab:electroncontribution}Data on Atoms with Largest Contributions to Free Electron Count}
+\begin{tabular}{c c c c}
+Atom & Abundance & Ionization Potential (eV)& Relative Importance\\
+H & 12.0 & 13.598 & 10$^-5$\\
+Li & 1.10 & 5.392 & 0.0032\\
+Na & 6.33 & 5.139 & 1.0 \\
+Mg & 8.151 & 7.046 & 0.54\\
+Al & 6.47 & 5.986 & 0.070\\
+K  & 5.12 & 4.341 & 1.5\\
+Ca & 6.36 & 6.113 & 0.58\\
+Rb & 2.60 & 4.177 & 0.17\\
+\end{tabular}
+\end{table}
