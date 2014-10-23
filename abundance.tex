@@ -1,7 +1,7 @@
 The \h\ abundance depends on several factors: the abundance of H, the
 abundance of free electrons (ionized from other species present in the
 atmosphere, including H), and the factors that lead to the conversion
-of \h\ to H: photoionization and collisions with other particles.  All
+of \h\ back to H: photoionization and collisions with other particles.  All
 of these factors have some sort of dependence on temperature.
 
 %The solar atmosphere is made up about 70\% by mass of H.  As will be
@@ -46,9 +46,9 @@ of ionized particles multiplied by their degree of ionization (whether
 they contribute one electron, two electrons, etc.). This is expressed by
 \beq
 \label{ref:ne}
-n_e = \sum\limits_{i,j}j\times n_{ij}
+n_e = \sum\limits_{X,i}i\times n_{Xi}
 \eeq
-where $i$ represents a specific atom and $j$ represents the ionization state
+where $X$ again represents a specific atom and $i$ represents the ionization state
 of the atom, thus summing over all possible ions of all atoms.  Since,
 as can be seen in equation~\ref{eq:saha} $n_{ij}$ also depends on
 $n_e$ we end up with a system of equations that, when rounded out with
@@ -129,10 +129,11 @@ expresses the Saha equation in the logarithmic form
 %\begin{align}
 \begin{multline}
 \log \frac{N(X_{i+1})}{N(X_i)} = \log \frac{u_{i+1}}{u_i}+\log 2 +\\
- 2.5 \log T - \frac{\chi}{kT}\log e - \log P_e - 0.48
+ 2.5 \log T - \chi \theta - \log P_e - 0.48
 \end{multline}
 %\end{align}
-where log is log$_{10}$, $u$ is the partition function
+where log is log$_{10}$, $\theta$ is a temperature parameter given by
+$\theta = 5040/T$ ($T$ is in Kelvin), and $u$ is the partition function
 \beq
 u_i = g_i + \sum\limits_{n=2}^{\infty} g_{in} e^{\chi_{in}/kT}
 \eeq
@@ -170,18 +171,19 @@ We can make the approximation that $N(H_{n=1})\approxeq N(H)$ since (as will be 
 \eeq
 \cite{boehm1989} calculates the number of H atoms with electrons excited to $n=3$ relative to H atoms in the ground state and gets
 \beq
-\frac{N(H_{n=3})}{N(H_{n=1})} = 6 \times 10 ^{-10}.
+\frac{N(H_{n=3})}{N(H_{n=1})} \approxeq 6 \times 10 ^{-10}.
 \eeq
-We will also plug in the value calculated by \cite{boehm1989} for $N(H)/N(H^-)$ since she used a slightly different temperature than I did in my calculation (equation~\ref{eq:hminusab}) for consistency.  She calculated $N(H)/N(H^-) \approx 3 \times 10^{-8}$.  Plugging in the values we get
+For consistency the value calculated by \cite{boehm1989} for
+$N(H)/N(H^-)$ will be used, since she used a slightly different temperature than I did in my calculation (equation~\ref{eq:hminusab}) for consistency.  She calculated $N(H)/N(H^-) \approx 3 \times 10^{-8}$.  Plugging in the values we get
 \beq
-\frac{N(H_{n=3})}{N(H^-)} = \frac{6 \times 10 ^{-10}}{3 \times 10^{-8}} = 2 \times 10^{-2}.
+\frac{N(H_{n=3})}{N(H^-)} \approxeq \frac{6 \times 10 ^{-10}}{3 \times 10^{-8}} = 2 \times 10^{-2}.
 \eeq
 So, there is about 100 times more \h\ than hydrogen atoms at $n=3$;
 assuming that the absorption coefficients of \h\ and  hydrogen atoms
 at $n=3$ are within a factor of 10 it can be clearly seen from this
 calculation alone that \h\ will be the dominating contribution to the
-opacity in visual wavelengths.
+opacity at visual wavelengths.
 
 %The Balmer continuum is in UV
-\cite{boehm1989} also shows that \h\ is only about 10 times less abundant than hydrogen atoms in $n=2$.  Since the Balmer ionization energy (corresponding to photon wavelength of 3647 \AA) occurs in the ultraviolet, where \h\ contributions to opacity are less than in the optical, and there is a relatively large fraction of $n=2$ H relative to \h\ there is a measurable increase in continuum opacity due to $n=2$ H.  %Indeed, figure~\ref{fig:bohmopacity} shows the Balmer discontinuity in the ultraviolet.
+\cite{boehm1989} also shows that \h\ is only about 10 times less abundant than hydrogen atoms in $n=2$.  Since the Balmer ionization energy (corresponding to photon wavelength of 3647 \AA) occurs in the ultraviolet, where \h\ contributions to opacity are less than in the optical, and there is a relatively large fraction of H$_{n=2}$ relative to \h\ there is a measurable increase in continuum opacity due to H$_{n=2}$.  %Indeed, figure~\ref{fig:bohmopacity} shows the Balmer discontinuity in the ultraviolet.
 
