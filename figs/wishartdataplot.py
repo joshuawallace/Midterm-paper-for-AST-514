@@ -25,7 +25,7 @@ pp.ylim(0,45)
 pp.xlim(1250,16300)
 pp.rc('text',usetex=True)#,fontsize=20)
 pp.tick_params(axis='both')#,labelsize=20)
-pp.xlabel(r"Wavelength (\AA)",fontsize=18)
+pp.xlabel(r"Photon Wavelength (\AA)",fontsize=18)
 pp.ylabel(r"$\sigma$ (10^{-18}~cm$^{2}$)",fontsize=18)
 
 #for tick in xaxis.get_major_ticks:
