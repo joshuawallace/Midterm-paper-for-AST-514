@@ -25,8 +25,16 @@ pp.ylim(0,45)
 pp.xlim(1250,16300)
 pp.rc('text',usetex=True)#,fontsize=20)
 pp.tick_params(axis='both')#,labelsize=20)
-pp.xlabel(r"Wavelength (\AA)")#,fontsize=20)
-pp.ylabel(r"$\sigma$ (10^{-18}~cm$^{2}$)")#,fontsize=20)
+pp.xlabel(r"Wavelength (\AA)",fontsize=18)
+pp.ylabel(r"$\sigma$ (10^{-18}~cm$^{2}$)",fontsize=18)
+
+#for tick in xaxis.get_major_ticks:
+#    tick.label.set_fontsize(20)
+
+#import matplotlib as mpb
+
+#mpb.rc('xtick',labelsize=14)
+#mpb.rc('ytick',labelsize=14)
 
 
 pp.savefig("boundfree_crosssection.pdf")
